@@ -50,3 +50,16 @@ for key in oldale_poke_mart['prices']:
     count = oldale_poke_mart['prices'][key] * oldale_poke_mart['stock'][key]
     total += count
 print('Oldale\'s Poke Mart inventory total : %s' % total)
+
+def compute_bill(items):
+    total = 0
+    for item in items:
+        if oldale_poke_mart['stock'][item] > 0:
+            total = total + oldale_poke_mart['prices'][item]
+            oldale_poke_mart['stock'][item] -= 1
+    return total
+
+# shopping_list = input('Choose items to buy:')
+# quantity_of_items = input('How many items:')
+shopping_list = ['poke ball', 'potion']
+print('Your total is: ', compute_bill(shopping_list))
