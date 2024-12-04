@@ -77,11 +77,35 @@ print_each_list_index(generic_list)
 
 # If omitted, start defaults to 0 and step defaults to 1.
 
-
 #!does not work
-# def create_number_list(x):
+# def create_num_list(x):
 #     for i in range(0, len(x)):
 #         x[i] = x[i]
 #     return x
+# print(create_num_list(range(3)))
 
-# print (create_number_list(range(3)))
+nums = [3,5,7]
+
+def total(numbers):
+    result = 0
+    for i in range(0, len(numbers)):
+        result += numbers[i]
+    return result
+
+print(f"From total func: {total(nums)}")
+
+word_list = ["Hello", "World"]
+
+def hello_world(words):
+    result = ""
+    for i in range(0,len(words)):
+        result += words[i] + " "
+    return result
+print(hello_world(word_list))
+
+list_one = [1,3,5]
+list_two = [2,4,6]
+
+def add_lists(param1,param2):
+    print(param1 + param2)
+add_lists(list_one,list_two)
