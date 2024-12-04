@@ -109,3 +109,14 @@ list_two = [2,4,6]
 def add_lists(param1,param2):
     print(param1 + param2)
 add_lists(list_one,list_two)
+
+to_flatten = [[1,2,3],[4,5,6,7,8,9]]
+
+def flatten(lists):
+    results = []
+    for list in lists:
+        for item in list:
+            results.append(item)
+    return results
+
+print(flatten(to_flatten))
